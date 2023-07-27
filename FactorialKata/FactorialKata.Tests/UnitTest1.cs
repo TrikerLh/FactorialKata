@@ -1,12 +1,17 @@
+using FluentAssertions;
+
 namespace FactorialKata.Tests {
-    public class Tests {
+    public class FactorialShould {
         [SetUp]
         public void Setup() {
         }
 
         [Test]
-        public void Test1() {
-            Assert.Pass();
+        public void Return_1()
+        {
+            var result = Factorial.Get(0);
+
+            result.Should().Be(1);
         }
     }
 }

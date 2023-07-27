@@ -4,6 +4,8 @@ public class Factorial
 {
     public static int Get(int number)
     {
-        return 1;
+        if(number == 0)
+            return 1;
+        return number;
     }
 }

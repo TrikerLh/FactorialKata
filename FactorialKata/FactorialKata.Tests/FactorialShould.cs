@@ -2,30 +2,13 @@ using FluentAssertions;
 
 namespace FactorialKata.Tests {
     public class FactorialShould {
-        [SetUp]
-        public void Setup() {
-        }
+        [TestCase(0, 1)]
+        [TestCase(2, 2)]
+        [TestCase(3, 6)]
+        public void Return_factorial(int number, int expected) {
+            var result = Factorial.Get(number);
 
-        [Test]
-        public void Return_1()
-        {
-            var result = Factorial.Get(0);
-
-            result.Should().Be(1);
-        }
-
-        [Test]
-        public void Return_2() {
-            var result = Factorial.Get(2);
-
-            result.Should().Be(2);
-        }
-
-        [Test]
-        public void Return_6() {
-            var result = Factorial.Get(3);
-
-            result.Should().Be(6);
+            result.Should().Be(expected);
         }
     }
 }

@@ -20,5 +20,12 @@ namespace FactorialKata.Tests {
 
             result.Should().Be(2);
         }
+
+        [Test]
+        public void Return_6() {
+            var result = Factorial.Get(3);
+
+            result.Should().Be(6);
+        }
     }
 }
